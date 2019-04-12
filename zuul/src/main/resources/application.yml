@@ -1,0 +1,19 @@
+server:
+   port: 9005
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+spring:
+  application:
+    name: zuul-test
+  main:
+    allow-bean-definition-overriding: true
+zuul:
+  routes:
+    ribbon:
+      path: /ribbon/**
+      service-id: ribbon
+    feign:
+      path: /feign/**
+      service-id: feign

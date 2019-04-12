@@ -12,11 +12,4 @@ server:
 #        initial-interval: 1000
 #        # 最大间隔时间，默认2000ms
 #        max-interval: 2000
-spring:
-  application:
-    name: config-client
-  cloud:
-    config:
-      label: master
-      profile: prod
-      uri: http://127.0.0.1:9006/
+

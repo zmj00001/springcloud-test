@@ -19,12 +19,8 @@ http://localhost:9003/say?name=zhou
 		restTemplate.getForObject("http://HELLO/say?name="+name,String.class);
 		HELLO 是Eureka Client的名字
 		
-		
-		
 		Dalston及以上的版本中，打开断路器 
 		feign.hystrix.enabled=true
-		
-			
 			
 		Hystrix Dashboard——Hystrix仪表盘	
 		http://localhost:9004/hystrix
@@ -47,7 +43,6 @@ http://localhost:9003/say?name=zhou
 		
 访问Feign:
 http://localhost:9004/say?name=Zhou
-
 
 	feign:
   hystrix:
@@ -72,11 +67,16 @@ http://localhost:9006/application-dev.yml
 http://localhost:9007/test/user
 http://127.0.0.1:8888/test/user
 
-??更改了config-server 8888的默认端口 在client-client里增加bootstrap.properties配置  http://localhost:9007/test/user  并不能访问
-还是得访问  http://127.0.0.1:8888/test/user 才能读取到远程git配置  暂未找到原因
 
+config-server
+    uri: https://gitee.com/javazmj/config-server/
+    search-paths: /**
+    
+config-server
+必須配置在bootstrap.properties里
 
-刷新bus http://localhost:9007/bus/refresh
-http://localhost:9007/bus/refresh   这里还是得访问8888才可以刷新
+刷新bus (2.0版本以上) http://localhost:9006/actuator/bus-refresh
+
+zipkin
 
 

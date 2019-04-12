@@ -28,7 +28,7 @@
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
 
-        <!--<dependency>
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-config-client</artifactId>
         </dependency>
@@ -37,7 +37,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
--->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -47,30 +47,47 @@
             因网络的抖动等原因导致config-client在启动时候访问config-server没有访问成功从而报错，
             希望config-client能重试几次，故重试机制
             -->
-      <!--  <dependency>
+        <dependency>
             <groupId>org.springframework.retry</groupId>
             <artifactId>spring-retry</artifactId>
         </dependency>
 
-        <dependency>
+       <!-- <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-bus-amqp</artifactId>
+        </dependency>-->
+
+       <!-- <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>-->
+
+        <!-- amqp -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-amqp</artifactId>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>-->
+        </dependency>
 
 
         <!-- 动态刷新配置
               更新了Git仓库中的配置文件，那如何让config-client能够及时感知到呢?
               动态刷新配置
            -->
-       <!-- <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>-->
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

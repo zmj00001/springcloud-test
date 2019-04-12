@@ -9,10 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zmj.springcloud</groupId>
-    <artifactId>eureka-server</artifactId>
+    <artifactId>zipkin-hi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eureka-server</name>
-    <packaging>jar</packaging>
+    <name>zipkin-hi</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -24,16 +23,18 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
+
+
     </dependencies>
+
 
     <dependencyManagement>
         <dependencies>
@@ -55,13 +56,5 @@
             </plugin>
         </plugins>
     </build>
-
-    <repositories>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
-        </repository>
-    </repositories>
 
 </project>
